@@ -1,0 +1,10 @@
+(any '(?x is in (1 2 3)) '(member ?x (1 2 3)))
+returns
+
+(1 is in (1 2 3))
+The following expression:
+
+(findall '(?x is in (1 2 3)) '(member ?x (1 2 3)))
+returns
+
+((1 is in (1 2 3))(2 is in (1 2 3))(3 is in (1 2 3)))
