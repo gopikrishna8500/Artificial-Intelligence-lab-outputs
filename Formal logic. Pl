@@ -1,0 +1,8 @@
+man(john).
+man(peter).
+woman(susan).
+woman(jane).
+
+% Define the logical rule
+mortal(X) :- man(X).
+mortal(X) :- woman(X)
