@@ -1,0 +1,4 @@
+is_member(X, [X | _]) :- !.    % If the head of the list is X
+ 
+ is_member(X, [_ | Rest]) :-    % else recur for the rest of the list
+     is_member(X, Rest).
