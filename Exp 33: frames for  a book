@@ -1,0 +1,28 @@
+%--------Define frames
+bird(a_kind_of, animal).
+bird(active_at, daylight).
+
+albatross(a_kind_of, bird).
+albatross(colour, black).
+albatross(size, 10).
+
+kiwi(a_kind_of, bird).
+kiwi(active_at, night).
+kiwi(colour, brown).
+kiwi(size, 24).
+
+albert(instance_of, albatross).
+albert(size, 10).
+
+%--------Inference in Frames
+value(Frame, Slot, Value):-
+    Query =.. [Frame, Slot, Value],
+    call(Query), !.     %Value is directly retrieved
+value(Frame, Slot, Value):-
+    parent(Frame, ParentName),
+    value(ParentName, Slot, Value).     % More general rule
+
+parent(Frame, ParentName):-
+    (Query =.. [Frame, a_kind_of, ParentName];
+    Query =.. [Frame, instance_of, ParentName]),
+    call(Query).
