@@ -1,0 +1,12 @@
+Format : relation(entity1, entity2, ....k'th entity).
+
+Example :
+friends(raju, mahesh).
+singer(sonu).
+odd_number(5).
+
+Explanation :
+These facts can be interpreted as :
+raju and mahesh are friends.
+sonu is a singer.
+5 is an odd number.
