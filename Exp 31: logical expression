@@ -1,0 +1,10 @@
+?- not dog(boxer).  
+no  
+?- dog(bombay).  
+no  
+?- not dog(bombay).  
+yes  
+?- A is 5, A is 5.  
+A = 5  
+?- A=5, not A is 5.   
+no  
